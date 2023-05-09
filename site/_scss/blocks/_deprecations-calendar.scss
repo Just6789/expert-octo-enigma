@@ -1,0 +1,262 @@
+.deprecations-calendar {
+  &__container {
+    max-width: calc(1290px + 3rem);
+  }
+
+  &__rows {
+
+    @include media-query('md-max') {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__row {
+    align-items: center;
+    color: var(--color-secondary-text);
+    display: flex;
+    font-family: 'Google Sans';
+    font-size: 1rem;
+    padding: 1rem 0;
+
+    @include media-query('md-max') {
+      background-color: var(--color-footer-bg);
+      border-radius: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  }
+
+  &__row > div:first-child {
+    padding-left: 1rem;
+    width: 16%;
+    
+    @include media-query('md-max') {
+      font-size: px-to-rem(14px);
+      margin-top: 1.5rem;
+      order: 1;
+      padding: 0 1.5rem;
+      width: 50%;
+    }
+  }
+
+  &__row > div:nth-child(2) {
+    width: 60%;
+
+    @include media-query('md-max') {
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    @include media-query('md') {
+      margin: 0 px-to-rem(24px);
+    }
+  }
+
+  &__row > div:nth-child(3) {
+    text-align: center;
+    width: 12%;
+
+    @include media-query('md-max') {
+      font-size: px-to-rem(14px);
+      margin-top: 1.5rem;
+      order: 1;
+      padding: 0 1.5rem;
+      text-align: left;
+      width: 50%;
+    }
+    
+    @include media-query('md') {
+      margin-right: px-to-rem(24px);
+    }
+  }
+
+  &__row > div:nth-child(4) {
+    padding-right: 1rem;
+    text-align: center;
+    width: 12%;
+
+    @include media-query('md-max') {
+      border-top: 1px solid get-color('grey-300');
+      margin: 1.5rem;
+      margin-bottom: 0;
+      order: 2;
+      padding-top: 1.5rem;
+      width: 100%;
+    }
+  }
+
+  &__row:nth-child(even) {
+    background-color: var(--color-footer-bg);
+    border-radius: 4px;
+
+    @include media-query('md-max') {
+      border-radius: 0.75rem;
+    }
+  }
+
+  &__header {
+    font-weight: 500;
+
+    @include media-query('md-max') {
+      display: none;
+    }
+
+  }
+
+  &__mobile-label {
+    display: none;
+
+    @include media-query('md-max') {
+      display: block;
+    }
+  }
+
+  &__article {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: px-to-rem(30px);
+
+    @include media-query('md-max') {
+      justify-content: start;
+      width: auto;
+    }
+
+    :hover {
+      background-color: transparent;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+
+  }
+
+  .hero-card {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .hero-card__inner {
+    @include media-query('md-max') {
+      text-align: center;
+    }
+
+    @include media-query('md') {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  &__filters {
+
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    padding: 1rem 0;
+
+    @include media-query('md-max') {
+      display: none;
+    }
+
+    > span {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-right: 1rem;
+    }
+    
+    .enhanced-select__wrapper {
+      border: 0;
+      color: get-color('blue-600');
+      font-weight: 500;
+    }
+
+    .enhanced-select label {
+      margin-left: 1rem;
+    }
+
+    .enhanced-select__options {
+      padding-right: 0.75rem;
+    }
+    
+  }
+
+  &__mobile-filters {
+
+    @include media-query('md') {
+      display: none;
+    }
+
+  }
+
+  &__selected {
+    border-bottom: 1px solid get-color('grey-300');
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+
+    @include media-query('md-max') {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .tag-pill {
+    border-radius: 1rem;
+
+    svg {
+      fill: var(--color-blue-medium);
+    }
+  }
+
+  .clear-filters {
+    background-color: var(--color-blue-medium);
+    border: unset;
+    color: #fff;
+    height: px-to-rem(34px);
+
+    svg {
+      display: none;
+    }
+  }
+
+  .clear-filters.hidden {
+    display: none;
+  }
+}  
+
+
+
+.mobile-filters-dialog {
+  border: 0;
+  border-radius: 4px;
+  margin-right: 0;
+
+  checkbox-group label {
+    font-size: px-to-rem(14px);
+    font-weight: 400;
+  }
+
+  checkbox-group input {
+    height: 20px;
+    width: 20px;
+  } 
+}
+
+.mobile-filters-btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+
+  @include media-query('md') {
+    display: none;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}

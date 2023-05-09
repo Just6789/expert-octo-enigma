@@ -1,0 +1,36 @@
+---
+title: 'Deprecations Calendar'
+alt: 'deprecations calendar'
+---
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/deprecations-calendar.css' %}
+{% endblock %}
+
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+
+{% block content %}
+<div class="deprecations-calendar">
+  <div class="deprecations-calendar__container width-full pad-400">
+    {{ heroCard(
+            "Deprecations Calendar",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at aliquet ipsum, sed imperdiet ex. Sed commodo fringilla posuere.",
+            "",
+            "",
+            "",
+            "",
+            "red"
+        ) }}
+
+      
+
+     {% include 'partials/deprecations-filters.njk' %}
+     {% include 'partials/deprecations-table.njk' %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/deprecations-calendar.js') }}"></script>
+{% endblock %}
