@@ -34,5 +34,3 @@ import './web-components/toc-active';
 
 // This component is only used on the tags page, but we don't split load yet.
 import './web-components/select-loader';
-
-import 'webdev-infra/web-components/YouTube';
