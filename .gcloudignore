@@ -1,0 +1,49 @@
+# Any files or directories listed here will not be uploaded when
+# gcloud app deploy is run. At the point it's run, the site's build
+# will have already completed, and the full set of static resources
+# will already be generated in /dist
+# We want to make sure that /dist, /server, and any necessary runtime
+# node metadata are uploaded, and everything else is excluded.
+# See https://github.com/GoogleChrome/developer.chrome.com/issues/2635
+
+# Top-level files
+/.editorconfig
+/.eleventy.js
+/.eleventyignore
+/.env
+/.eslintignore
+/.eslintrc.js
+/.gcloudignore
+/.gitignore
+/.huskyrc.js
+/.nvmrc
+/.percy.js
+/.prettierrc.js
+/.remarkrc.js
+/.stylelintrc.js
+/algolia.js
+/ava.config.js
+/cloud-secrets.js
+/CODE_OF_CONDUCT.md
+/CONTRIBUTING.md
+/database.rules.json
+/gulp-tasks
+/gulpfile.js
+/LICENSE
+/lighthouserc.js
+/netlify.toml
+/README.md
+/rollup.config.js
+/tsconfig.json
+/version-check.js
+
+# Top-level directories
+/.cloudbuild
+/.git
+/.github
+/external
+/node_modules
+/site
+/tests
+/tools
+/types
