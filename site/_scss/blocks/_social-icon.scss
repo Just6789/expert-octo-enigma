@@ -1,0 +1,10 @@
+.social-icon {
+  svg {
+    height: auto;
+    width: 32px;
+  }
+
+  :hover {
+    color: var(--color-primary);
+  }
+}
