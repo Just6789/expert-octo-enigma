@@ -1,0 +1,22 @@
+home:
+  en: 'Home'
+  es: 'Inicio'
+
+docs:
+  en: 'Docs'
+  es: 'Docs'
+
+blog:
+  en: 'Blog'
+  es: 'Blog'
+
+100:
+  en: 'Chrome 100'
+
+releases:
+  en: 'Releases'
+  es: 'Versiones'
+
+articles:
+  en: 'Articles'
+  es: 'Artículos'
