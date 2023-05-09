@@ -1,0 +1,38 @@
+/*
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+const path = require('path');
+const fs = require('fs');
+
+// The path to the _includes folder inside developer.chrome.com.
+const includesPath = path.join(__dirname, '../_includes');
+
+const cache = new Map();
+
+/**
+ * @param {string} fileName
+ * @return {string} The contents of the included file
+ */
+module.exports = fileName => {
+  let include = cache.get(fileName);
+  if (!include) {
+    const filePath = path.join(includesPath, fileName);
+    include = fs.readFileSync(filePath, 'utf-8');
+    cache.set(fileName, include);
+  }
+
+  return include;
+};
